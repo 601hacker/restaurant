@@ -1,30 +1,48 @@
-let body = document.querySelector('body');
+import { homeCreator } from "./home";
+import { para2 } from "./menu";
+import { contactCreator } from "./contact";
 
-const createButtons = (function() {
-        let homeButton = function() {
-            let homeButton = document.createElement('button');
-            homeButton.innerText = 'Home';
-            body.appendChild(homeButton);
-        }
+// homeCreator();
+contactCreator();
 
-        let menuButton = function() {
-            let menuButton = document.createElement('button');
-            menuButton.innerText = 'menu';
-            body.appendChild(menuButton);
-        }
-        let contactButton = function() {
-            let contactButton = document.createElement('button');
-            contactButton.innerText = 'Contact';
-            body.appendChild(contactButton);
-        }
+// const tabSwitching = (function() {
+//     let homeButton = document.querySelector('.home');
+//     let menuButton = document.querySelector('.menu');
+//     let contactButton = document.querySelector('.contact');
 
-        return {
-            createAllButtons: function() {
-                homeButton();
-                menuButton();
-                contactButton();
-            }
-        }
-})();
+//     function homeButtonFunction() {
+//         homeButton.addEventListener('click', function() {
+//             let para = document.querySelector('.para');
+//             para.parentNode.removeChild(para);
+//             para1();
+//        });
+//     }
+    
+//     function menuButtonFunction() {
+//         menuButton.addEventListener('click', function() {
+//             let para = document.querySelector('.para');
+//             para.parentNode.removeChild(para);
+//             para2();
+//         });
+//     }
+    
+//     function contactButtonFunction() {
+//         contactButton.addEventListener('click', function() {
+//             let para = document.querySelector('.para');
+//             para.parentNode.removeChild(para);
+//             para3();
+//         });
+//     }
 
-createButtons.createAllButtons();
+//     return {
+//         homeButtonFunction: homeButtonFunction,
+//         menuButtonFunction: menuButtonFunction,
+//         contactButtonFunction: contactButtonFunction
+//     }
+// })();
+
+// para1();
+
+// tabSwitching.homeButtonFunction();
+// tabSwitching.menuButtonFunction();
+// tabSwitching.contactButtonFunction();
