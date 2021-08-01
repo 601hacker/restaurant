@@ -1,48 +1,49 @@
 import { homeCreator } from "./home";
-import { para2 } from "./menu";
+import { menuCreator } from "./menu";
 import { contactCreator } from "./contact";
 
 // homeCreator();
-contactCreator();
+// contactCreator();
+// menuCreator();
 
-// const tabSwitching = (function() {
-//     let homeButton = document.querySelector('.home');
-//     let menuButton = document.querySelector('.menu');
-//     let contactButton = document.querySelector('.contact');
+const tabSwitching = (function() {
+    let homeButton = document.querySelector('.home');
+    let menuButton = document.querySelector('.menu');
+    let contactButton = document.querySelector('.contact');
 
-//     function homeButtonFunction() {
-//         homeButton.addEventListener('click', function() {
-//             let para = document.querySelector('.para');
-//             para.parentNode.removeChild(para);
-//             para1();
-//        });
-//     }
+    function homeButtonFunction() {
+        homeButton.addEventListener('click', function() {
+            let divs = document.querySelector('.divs');
+            divs.parentNode.removeChild(divs);
+            homeCreator();
+       });
+    }
     
-//     function menuButtonFunction() {
-//         menuButton.addEventListener('click', function() {
-//             let para = document.querySelector('.para');
-//             para.parentNode.removeChild(para);
-//             para2();
-//         });
-//     }
+    function menuButtonFunction() {
+        menuButton.addEventListener('click', function() {
+            let divs = document.querySelector('.divs');
+            divs.parentNode.removeChild(divs);
+            menuCreator();
+        });
+    }
     
-//     function contactButtonFunction() {
-//         contactButton.addEventListener('click', function() {
-//             let para = document.querySelector('.para');
-//             para.parentNode.removeChild(para);
-//             para3();
-//         });
-//     }
+    function contactButtonFunction() {
+        contactButton.addEventListener('click', function() {
+            let divs = document.querySelector('.divs');
+            divs.parentNode.removeChild(divs);
+            contactCreator();
+        });
+    }
 
-//     return {
-//         homeButtonFunction: homeButtonFunction,
-//         menuButtonFunction: menuButtonFunction,
-//         contactButtonFunction: contactButtonFunction
-//     }
-// })();
+    return {
+        homeButtonFunction: homeButtonFunction,
+        menuButtonFunction: menuButtonFunction,
+        contactButtonFunction: contactButtonFunction
+    }
+})();
 
-// para1();
+homeCreator();
 
-// tabSwitching.homeButtonFunction();
-// tabSwitching.menuButtonFunction();
-// tabSwitching.contactButtonFunction();
+tabSwitching.homeButtonFunction();
+tabSwitching.menuButtonFunction();
+tabSwitching.contactButtonFunction();
