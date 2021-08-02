@@ -3,6 +3,7 @@ const menu = (function() {
         let container = document.querySelector('.container');
         let menuDiv = document.createElement('div');
         menuDiv.className = 'divs';
+        menuDiv.id = 'menuDiv';
 
         let mainHeading = document.createElement('h1');
         mainHeading.innerText = 'Menu';

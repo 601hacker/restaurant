@@ -3,6 +3,7 @@ const home = (function() {
         let container = document.querySelector('.container');
         let homeDiv = document.createElement('div');
         homeDiv.className = 'divs';
+        homeDiv.id = 'homeDiv';
 
         let heading = document.createElement('h1');
         heading.innerText = 'Food palace';
@@ -10,11 +11,6 @@ const home = (function() {
         let para1 = document.createElement('p');
         para1.innerText = 'Best Pizza in your country \n Made with passion since 1908';
         
-        let img = document.createElement('img');
-        img.setAttribute('src', '../dist/pexels-vincent-rivaud-2147491.jpg');
-        img.className = 'homeImage';
-        
-        para1.appendChild(img);
         homeDiv.appendChild(heading);
         homeDiv.appendChild(para1);
         container.appendChild(homeDiv);

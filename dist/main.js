@@ -50,14 +50,11 @@ var home = function () {
     var container = document.querySelector('.container');
     var homeDiv = document.createElement('div');
     homeDiv.className = 'divs';
+    homeDiv.id = 'homeDiv';
     var heading = document.createElement('h1');
     heading.innerText = 'Food palace';
     var para1 = document.createElement('p');
     para1.innerText = 'Best Pizza in your country \n Made with passion since 1908';
-    var img = document.createElement('img');
-    img.setAttribute('src', '../dist/pexels-vincent-rivaud-2147491.jpg');
-    img.className = 'homeImage';
-    para1.appendChild(img);
     homeDiv.appendChild(heading);
     homeDiv.appendChild(para1);
     container.appendChild(homeDiv);
@@ -87,6 +84,7 @@ var menu = function () {
     var container = document.querySelector('.container');
     var menuDiv = document.createElement('div');
     menuDiv.className = 'divs';
+    menuDiv.id = 'menuDiv';
     var mainHeading = document.createElement('h1');
     mainHeading.innerText = 'Menu';
     var subHeading1 = document.createElement('h1');
